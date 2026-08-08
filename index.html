@@ -6,9 +6,14 @@
   <title>【写你的店名】 | 用心烹制每一餐</title>
   <meta name="description" content="【写你的店名】是一家以人为本的小店，提供招牌美食与舒适的用餐环境。欢迎到店品尝，一键导航即可到达。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- 无障碍跳转 -->
+  <a href="#home" class="skip-link">跳转到主内容</a>
+
   <!-- ============ 顶部导航 ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
@@ -25,10 +30,18 @@
         <a href="#info" class="btn btn--primary nav__cta">一键导航</a>
       </nav>
     </div>
+    <!-- 滚动进度条 -->
+    <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
   </header>
 
-  <!-- ============ 首屏 Hero ============ -->
+  <!-- ============ 首屏 Hero（图文叠加） ============ -->
   <section class="hero" id="home">
+    <!-- 背景图层 -->
+    <div class="hero__bg">
+      <img src="assets/img/hero.webp" alt="" fetchpriority="high" />
+      <div class="hero__bg-overlay"></div>
+    </div>
+
     <div class="container hero__inner">
       <div class="hero__text">
         <span class="hero__eyebrow">用心烹制 · 温暖相伴</span>
@@ -43,11 +56,22 @@
         </div>
       </div>
 
-      <div class="hero__media">
-        <!-- 替换为你的门店实拍图（建议 1200×900 以上） -->
-        <img src="assets/img/hero.svg" alt="门店实景占位图" />
+      <div class="hero__card">
+        <div class="hero__card-inner">
+          <img src="assets/img/dish-1.webp" alt="秘制红烧肉" loading="lazy" />
+          <div class="hero__card-body">
+            <span class="hero__card-tag">今日推荐</span>
+            <h3>秘制红烧肉</h3>
+            <p>慢炖三小时，肥而不腻、入口即化</p>
+          </div>
+        </div>
         <div class="hero__badge">每日新鲜 · 现点现做</div>
       </div>
+    </div>
+
+    <!-- 向下滚动提示 -->
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
     </div>
   </section>
 
@@ -64,7 +88,7 @@
         <!-- 菜品 1 -->
         <article class="card dish reveal">
           <div class="card__media">
-            <img src="assets/img/dish-1.svg" alt="秘制红烧肉" />
+            <img src="assets/img/dish-1.webp" alt="秘制红烧肉" loading="lazy" />
           </div>
           <div class="card__body">
             <h3 class="card__title">秘制红烧肉</h3>
@@ -76,7 +100,7 @@
         <!-- 菜品 2 -->
         <article class="card dish reveal">
           <div class="card__media">
-            <img src="assets/img/dish-2.svg" alt="招牌酸菜鱼" />
+            <img src="assets/img/dish-2.webp" alt="招牌酸菜鱼" loading="lazy" />
           </div>
           <div class="card__body">
             <h3 class="card__title">招牌酸菜鱼</h3>
@@ -88,7 +112,7 @@
         <!-- 菜品 3 -->
         <article class="card dish reveal">
           <div class="card__media">
-            <img src="assets/img/dish-3.svg" alt="黑松露炒饭" />
+            <img src="assets/img/dish-3.webp" alt="黑松露炒饭" loading="lazy" />
           </div>
           <div class="card__body">
             <h3 class="card__title">黑松露炒饭</h3>
@@ -100,7 +124,7 @@
         <!-- 菜品 4 -->
         <article class="card dish reveal">
           <div class="card__media">
-            <img src="assets/img/dish-4.svg" alt="古法糖醋排骨" />
+            <img src="assets/img/dish-4.webp" alt="古法糖醋排骨" loading="lazy" />
           </div>
           <div class="card__body">
             <h3 class="card__title">古法糖醋排骨</h3>
@@ -123,19 +147,19 @@
 
       <div class="grid grid--env">
         <figure class="env reveal">
-          <img src="assets/img/env-1.svg" alt="用餐区" />
+          <img src="assets/img/env-1.webp" alt="用餐区" loading="lazy" />
           <figcaption>用餐区</figcaption>
         </figure>
         <figure class="env reveal">
-          <img src="assets/img/env-2.svg" alt="吧台" />
+          <img src="assets/img/env-2.webp" alt="吧台" loading="lazy" />
           <figcaption>吧台</figcaption>
         </figure>
         <figure class="env reveal">
-          <img src="assets/img/env-3.svg" alt="包厢" />
-          <figcaption>包厢</figcaption>
+          <img src="assets/img/env-3.webp" alt="窗边座位" loading="lazy" />
+          <figcaption>窗边座位</figcaption>
         </figure>
         <figure class="env reveal">
-          <img src="assets/img/env-4.svg" alt="门店门头" />
+          <img src="assets/img/env-4.webp" alt="门店门头" loading="lazy" />
           <figcaption>门店门头</figcaption>
         </figure>
       </div>
@@ -191,11 +215,6 @@
 
       <!-- 一键导航 -->
       <div class="nav-cta reveal">
-        <!--
-          一键导航：把下方 href 中的经纬度替换为你的门店真实坐标（高德坐标系），
-          或改为 https://www.amap.com/search?query=你的门店地址 也可实现搜索导航。
-          示例坐标（北京天安门）仅作占位：116.397428,39.90923
-        -->
         <a class="btn btn--primary btn--xl"
            href="https://uri.amap.com/marker?position=120.1551,30.2741&name=【写你的店名】&src=myweb&coordinate=gaode&callnative=1"
            target="_blank" rel="noopener">
@@ -222,8 +241,7 @@
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <span>© <span id="year">2026</span> 【写你的店名】. 保留所有权利.</span>
-        <span>本页面为展示模板，内容可自由替换。</span>
+        <span>&copy; <span id="year">2026</span> 【写你的店名】. 保留所有权利.</span>
       </div>
     </div>
   </footer>
