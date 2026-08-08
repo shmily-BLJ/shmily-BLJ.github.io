@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>【写你的店名】 | 用心烹制每一餐</title>
+  <meta name="description" content="【写你的店名】是一家以人为本的小店，提供招牌美食与舒适的用餐环境。欢迎到店品尝，一键导航即可到达。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ 顶部导航 ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo">【写你的店名】</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks" aria-label="主导航">
+        <a href="#dishes">招牌菜</a>
+        <a href="#environment">门店环境</a>
+        <a href="#info">营业信息</a>
+        <a href="#info" class="btn btn--primary nav__cta">一键导航</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ 首屏 Hero ============ -->
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="hero__eyebrow">用心烹制 · 温暖相伴</span>
+        <h1 class="hero__title">欢迎光临<br /><span class="accent">【写你的店名】</span></h1>
+        <p class="hero__subtitle">
+          这里记录着我们对食物的热爱。从一锅慢炖的汤，到一盘刚出锅的菜，
+          每一道都只为给你带来最朴实的满足。
+        </p>
+        <div class="hero__actions">
+          <a href="#dishes" class="btn btn--primary btn--lg">查看招牌菜</a>
+          <a href="#info" class="btn btn--ghost btn--lg">营业信息</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <!-- 替换为你的门店实拍图（建议 1200×900 以上） -->
+        <img src="assets/img/hero.svg" alt="门店实景占位图" />
+        <div class="hero__badge">每日新鲜 · 现点现做</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 招牌菜 ============ -->
+  <section class="section" id="dishes">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">SIGNATURE DISHES</span>
+        <h2 class="section__title">招牌菜</h2>
+        <p class="section__desc">几道我们最自豪的味道，等待你亲自来尝。</p>
+      </div>
+
+      <div class="grid grid--dishes">
+        <!-- 菜品 1 -->
+        <article class="card dish reveal">
+          <div class="card__media">
+            <img src="assets/img/dish-1.svg" alt="秘制红烧肉" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">秘制红烧肉</h3>
+            <p class="card__text">慢炖三小时的经典红烧肉，肥而不腻、入口即化，藏着记忆里家的味道。</p>
+            <span class="card__tag">人气 No.1</span>
+          </div>
+        </article>
+
+        <!-- 菜品 2 -->
+        <article class="card dish reveal">
+          <div class="card__media">
+            <img src="assets/img/dish-2.svg" alt="招牌酸菜鱼" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">招牌酸菜鱼</h3>
+            <p class="card__text">鲜活鱼片搭配秘制酸汤，酸辣开胃，鱼肉嫩滑，一口汤一口饭停不下来。</p>
+            <span class="card__tag">开胃首选</span>
+          </div>
+        </article>
+
+        <!-- 菜品 3 -->
+        <article class="card dish reveal">
+          <div class="card__media">
+            <img src="assets/img/dish-3.svg" alt="黑松露炒饭" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">黑松露炒饭</h3>
+            <p class="card__text">粒粒分明的炒饭融入黑松露的馥郁香气，简单却足够惊艳。</p>
+            <span class="card__tag">主厨推荐</span>
+          </div>
+        </article>
+
+        <!-- 菜品 4 -->
+        <article class="card dish reveal">
+          <div class="card__media">
+            <img src="assets/img/dish-4.svg" alt="古法糖醋排骨" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">古法糖醋排骨</h3>
+            <p class="card__text">酸甜比例恰到好处，外酥里嫩，老少皆宜的下饭神器。</p>
+            <span class="card__tag">孩子最爱</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 门店环境 ============ -->
+  <section class="section section--alt" id="environment">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">OUR SPACE</span>
+        <h2 class="section__title">门店环境</h2>
+        <p class="section__desc">干净、温暖、舒适，是我们想给你的第二空间。</p>
+      </div>
+
+      <div class="grid grid--env">
+        <figure class="env reveal">
+          <img src="assets/img/env-1.svg" alt="用餐区" />
+          <figcaption>用餐区</figcaption>
+        </figure>
+        <figure class="env reveal">
+          <img src="assets/img/env-2.svg" alt="吧台" />
+          <figcaption>吧台</figcaption>
+        </figure>
+        <figure class="env reveal">
+          <img src="assets/img/env-3.svg" alt="包厢" />
+          <figcaption>包厢</figcaption>
+        </figure>
+        <figure class="env reveal">
+          <img src="assets/img/env-4.svg" alt="门店门头" />
+          <figcaption>门店门头</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 营业信息 ============ -->
+  <section class="section" id="info">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">VISIT US</span>
+        <h2 class="section__title">营业信息</h2>
+        <p class="section__desc">找到我们，比想象中更简单。</p>
+      </div>
+
+      <div class="grid grid--info">
+        <!-- 营业时间 -->
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 class="info-card__title">营业时间</h3>
+          <ul class="hours">
+            <li><span>周一至周五</span><span>11:00 - 22:00</span></li>
+            <li><span>周六、周日</span><span>10:30 - 22:30</span></li>
+            <li class="hours__note"><span>午市</span><span>11:00 - 14:00</span></li>
+            <li class="hours__note"><span>晚市</span><span>17:00 - 22:00</span></li>
+          </ul>
+        </div>
+
+        <!-- 地址 -->
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <h3 class="info-card__title">门店地址</h3>
+          <p class="info-card__text">【写你的门店地址，例如：广州市天河区xx路xx号xx广场1层】</p>
+          <p class="info-card__hint">点击下方按钮，一键导航到店。</p>
+        </div>
+
+        <!-- 电话 -->
+        <div class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+          </div>
+          <h3 class="info-card__title">订餐电话</h3>
+          <p class="info-card__text">
+            <a href="tel:【写你的电话，例如02012345678】" class="phone-link">【写你的电话，例如：020-1234 5678】</a>
+          </p>
+          <p class="info-card__hint">订座、外卖、活动咨询，欢迎来电。</p>
+        </div>
+      </div>
+
+      <!-- 一键导航 -->
+      <div class="nav-cta reveal">
+        <!--
+          一键导航：把下方 href 中的经纬度替换为你的门店真实坐标（高德坐标系），
+          或改为 https://www.amap.com/search?query=你的门店地址 也可实现搜索导航。
+          示例坐标（北京天安门）仅作占位：116.397428,39.90923
+        -->
+        <a class="btn btn--primary btn--xl"
+           href="https://uri.amap.com/marker?position=116.397428,39.90923&name=【写你的店名】&src=myweb&coordinate=gaode&callnative=1"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          一键导航 · 到店地图
+        </a>
+        <p class="nav-cta__hint">支持高德地图 App 与网页版，自动规划最优路线。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">【写你的店名】</span>
+        <p>用心烹制每一餐，期待与你相遇。</p>
+      </div>
+      <nav class="footer__links" aria-label="页脚导航">
+        <a href="#dishes">招牌菜</a>
+        <a href="#environment">门店环境</a>
+        <a href="#info">营业信息</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© <span id="year">2026</span> 【写你的店名】. 保留所有权利.</span>
+        <span>本页面为展示模板，内容可自由替换。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
