@@ -1,7 +1,7 @@
 /* =========================================================
-   【写你的店名】展示站 · 样式表（优化版）
+   拾味小馆展示站 · 样式表（优化版）
    设计：大厂简约风 · 暖色系（米白背景 + 橙红强调）
-   字体：思源宋体（标题）+ 思源黑体（正文）| Google Fonts
+   字体：系统中文衬线（标题）+ 系统中文黑体（正文），无外链 Web Font
    ========================================================= */
 
 :root {
@@ -19,8 +19,8 @@
   --border-light: #F0E8DD;
 
   /* ── 排版 Token ── */
-  --font-display: "Noto Serif SC", "Songti SC", "STSong", serif;
-  --font-body:    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Songti SC", "STSong", "SimSun", serif;
+  --font-body:    -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif;
 
   /* ── 间距 / 圆角 / 阴影 ── */
   --radius: 18px;
